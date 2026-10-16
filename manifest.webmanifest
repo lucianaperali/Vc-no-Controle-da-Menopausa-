@@ -1,0 +1,14 @@
+{
+  "name": "Você no Controle da Menopausa",
+  "short_name": "Menopausa",
+  "description": "Registre sintomas, identifique padrões e receba orientações claras sobre a menopausa.",
+  "lang": "pt-BR",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#fdf6f4",
+  "theme_color": "#b4476b",
+  "icons": [
+    { "src": "icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable" }
+  ]
+}

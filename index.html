@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#b4476b">
+  <meta name="description" content="Registre sintomas, identifique padrões e receba orientações claras sobre a menopausa.">
+  <title>Você no Controle da Menopausa</title>
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="icon.svg">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <h1>Você no Controle <span>da Menopausa</span></h1>
+  </header>
+
+  <main id="view" tabindex="-1"></main>
+
+  <nav class="tabbar" aria-label="Navegação principal">
+    <button data-tab="hoje" aria-label="Registro do dia"><i>📝</i>Hoje</button>
+    <button data-tab="historico" aria-label="Histórico"><i>📅</i>Histórico</button>
+    <button data-tab="padroes" aria-label="Padrões"><i>📈</i>Padrões</button>
+    <button data-tab="guia" aria-label="Guia de orientações"><i>💡</i>Guia</button>
+  </nav>
+
+  <div id="toast" role="status" aria-live="polite"></div>
+  <script src="app.js"></script>
+</body>
+</html>
