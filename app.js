@@ -210,6 +210,7 @@ function viewHoje() {
   return `
     <h2>${isToday ? 'Como você está hoje?' : 'Registro de ' + esc(fmtDate(state.date))}</h2>
     <p class="muted">${esc(fmtDate(state.date))}. Leva menos de 1 minuto e é salvo automaticamente.</p>
+    <p class="muted">Este é um app de apoio: ele ajuda você a registrar e observar seus sintomas, mas <b>não faz diagnóstico</b>.</p>
 
     <div class="card">
       <label class="field" for="date">Data do registro</label>
@@ -438,7 +439,7 @@ function viewPadroes() {
     const days = Math.round((parseKey(dateKey()) - parseKey(last)) / 86400000);
     cycle = `<div class="card"><h3>🩸 Menstruação</h3>
       <p>Último registro: <b>${esc(fmtDate(last, { day: 'numeric', month: 'long' }))}</b> (há ${days} dia${days === 1 ? '' : 's'}).</p>
-      ${days >= 60 ? '<p class="muted">Intervalos longos são comuns na perimenopausa. A menopausa é confirmada após 12 meses seguidos sem menstruar.</p>' : ''}
+      ${days >= 60 ? '<p class="muted">Intervalos longos são comuns na perimenopausa. Converse com seu médico para avaliar o seu caso.</p>' : ''}
     </div>`;
   }
 
@@ -476,7 +477,7 @@ function viewPadroes() {
     ${cycle}
 
     <div class="btn-row"><button class="btn ghost" data-print>Imprimir / salvar PDF para a consulta</button></div>
-    <p class="muted">Este app não substitui consulta médica.</p>
+    <p class="muted"><b>App de apoio:</b> os padrões mostrados são apenas observações dos seus próprios registros. Não são diagnóstico nem indicação de tratamento. Leve-os à sua consulta para que um profissional de saúde avalie o seu caso.</p>
   `;
 }
 
@@ -486,6 +487,11 @@ function viewGuia() {
   return `
     <h2>Guia de orientações</h2>
     <p class="muted">Informações gerais e de apoio. Não substituem a avaliação de um profissional de saúde.</p>
+
+    <div class="card">
+      <h3>ℹ️ Importante</h3>
+      <p>Este é um <b>app de apoio</b>. Ele <b>não faz diagnóstico</b>, não indica remédios ou tratamentos e <b>não substitui</b> consulta, exames ou orientação de um profissional de saúde. Em caso de dúvida, procure uma Unidade Básica de Saúde ou o seu médico.</p>
+    </div>
 
     <div class="card alert">
       <h3>⚠️ Procure atendimento se houver</h3>
@@ -539,7 +545,7 @@ function viewGuia() {
 
     <div class="card">
       <h3>Levando o registro à consulta</h3>
-      <p>Na aba <b>Padrões</b>, imprima ou salve o resumo em PDF. Na aba <b>Histórico</b>, exporte os dados completos. Isso ajuda o médico a avaliar, por exemplo, se a terapia hormonal ou outras opções fazem sentido para você.</p>
+      <p>Na aba <b>Padrões</b>, imprima ou salve o resumo em PDF. Na aba <b>Histórico</b>, exporte os dados completos. Isso ajuda o profissional de saúde a entender como você tem se sentido. Só ele pode avaliar o seu caso e indicar o que faz sentido para você.</p>
     </div>
   `;
 }
