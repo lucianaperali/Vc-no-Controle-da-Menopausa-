@@ -525,6 +525,12 @@ function viewGuia() {
     </div>
 
     <div class="card">
+      <h3>💗 Sobre este app</h3>
+      <p>O <b>Você no Controle da Menopausa</b> é uma agenda de sintomas oferecida <b>gratuitamente</b> para ajudar as mulheres a acompanhar essa fase com mais informação e tranquilidade.</p>
+      <p>Desenvolvido pela <b>PeralIA Tech</b>.</p>
+    </div>
+
+    <div class="card">
       <h3>🔒 Privacidade</h3>
       <p>Seus registros ficam <b>somente neste aparelho</b>. O app não pede nome, e-mail, telefone nem login, e não envia nenhuma informação para a Prefeitura, para a internet ou para terceiros.</p>
       <p>Por isso, se você limpar os dados do navegador ou trocar de celular, os registros se perdem: use <b>Histórico › Backup</b> para guardar uma cópia. Quem usar o mesmo aparelho pode ver seus registros.</p>

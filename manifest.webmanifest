@@ -1,7 +1,7 @@
 {
   "name": "Você no Controle da Menopausa",
   "short_name": "Menopausa",
-  "description": "Registre sintomas, identifique padrões e receba orientações claras sobre a menopausa.",
+  "description": "Agenda de sintomas gratuita para acompanhar a menopausa. Desenvolvido por PeralIA Tech.",
   "lang": "pt-BR",
   "start_url": "./index.html",
   "scope": "./",

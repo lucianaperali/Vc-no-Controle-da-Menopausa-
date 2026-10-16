@@ -66,6 +66,8 @@ p { margin: 0 0 10px; }
 .card.alert { border-color: var(--warn); }
 .card.alert h3 { color: var(--warn); }
 
+.credit { max-width: 640px; margin: 0 auto; padding: 0 16px 16px; text-align: center; font-size: .8rem; color: var(--muted); }
+
 /* Bottom tab bar */
 .tabbar {
   position: fixed; left: 0; right: 0; bottom: 0;

@@ -19,3 +19,7 @@ Para publicar, basta hospedar os arquivos em qualquer hospedagem estática (GitH
 - **Guia:** orientações por sintoma, hábitos gerais e sinais de alerta para procurar atendimento.
 
 Os dados ficam somente no aparelho (`localStorage`); nada é enviado a servidores. O app oferece informações de apoio e não substitui consulta médica.
+
+## Autoria e licença
+
+Desenvolvido por **PeralIA Tech** e oferecido gratuitamente como agenda de sintomas para mulheres na menopausa. Licença MIT (veja `LICENSE`): o uso, a cópia e a distribuição são livres, desde que o aviso de autoria seja mantido.
