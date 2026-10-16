@@ -495,6 +495,7 @@ function viewGuia() {
         <li>Tristeza profunda, desesperança ou pensamentos de se machucar. No Brasil, o CVV atende 24h pelo <b>188</b>.</li>
         <li>Sintomas que atrapalham seu trabalho, sono ou relações.</li>
       </ul>
+      <p><b>Emergência:</b> SAMU <b>192</b>. Dúvidas sobre saúde: Disque Saúde <b>136</b> (Ministério da Saúde). Para acompanhamento, procure a Unidade Básica de Saúde (UBS) mais próxima de você.</p>
     </div>
 
     <div class="card">
@@ -521,6 +522,13 @@ function viewGuia() {
           <summary>${s.icon} ${esc(s.label)}</summary>
           <ul>${s.tips.map((t) => `<li>${esc(t)}</li>`).join('')}</ul>
         </details>`).join('')}
+    </div>
+
+    <div class="card">
+      <h3>🔒 Privacidade</h3>
+      <p>Seus registros ficam <b>somente neste aparelho</b>. O app não pede nome, e-mail, telefone nem login, e não envia nenhuma informação para a Prefeitura, para a internet ou para terceiros.</p>
+      <p>Por isso, se você limpar os dados do navegador ou trocar de celular, os registros se perdem: use <b>Histórico › Backup</b> para guardar uma cópia. Quem usar o mesmo aparelho pode ver seus registros.</p>
+      <p>Você pode apagar tudo a qualquer momento em <b>Histórico › Apagar tudo</b>.</p>
     </div>
 
     <div class="card">
@@ -631,6 +639,28 @@ view.addEventListener('change', (ev) => {
   } else if (ev.target.id === 'import-file' && ev.target.files[0]) {
     importJSON(ev.target.files[0]);
   }
+});
+
+/* ------------------------------------------------------------------ *
+ * Tamanho do texto (acessibilidade)
+ * ------------------------------------------------------------------ */
+
+const SIZES = ['', 'large', 'xlarge'];
+
+function applySize(i) {
+  const v = SIZES[i] || '';
+  if (v) document.documentElement.dataset.size = v; else delete document.documentElement.dataset.size;
+  try { localStorage.setItem('vcm.size', String(i)); } catch { /* sem armazenamento */ }
+  return i;
+}
+
+let sizeIdx = 0;
+try { sizeIdx = Number(localStorage.getItem('vcm.size')) || 0; } catch { /* ignora */ }
+applySize(sizeIdx);
+
+$('#text-size').addEventListener('click', () => {
+  sizeIdx = applySize((sizeIdx + 1) % SIZES.length);
+  toast(['Texto normal', 'Texto grande', 'Texto muito grande'][sizeIdx]);
 });
 
 /* ------------------------------------------------------------------ *
